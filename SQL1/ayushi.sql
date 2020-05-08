@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 04:07 PM
+-- Generation Time: May 08, 2020 at 04:18 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -20,6 +20,51 @@ SET time_zone = "+00:00";
 --
 -- Database: `ayushi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emp`
+--
+
+CREATE TABLE `emp` (
+  `EMP_ID` int(11) NOT NULL,
+  `SALARY` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `emp`
+--
+
+INSERT INTO `emp` (`EMP_ID`, `SALARY`) VALUES
+(1, 1200),
+(2, 2200),
+(3, 2300),
+(4, 2400),
+(5, 2200);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emp1`
+--
+
+CREATE TABLE `emp1` (
+  `EMP1_ID` int(11) NOT NULL,
+  `SHIFT_time` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `emp1`
+--
+
+INSERT INTO `emp1` (`EMP1_ID`, `SHIFT_time`) VALUES
+(1, 12),
+(2, 2),
+(3, 2),
+(4, 3),
+(5, 6),
+(6, 9);
 
 -- --------------------------------------------------------
 
@@ -49,6 +94,12 @@ INSERT INTO `employee` (`ID`, `NAME`, `AGE`, `ADDRESS`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `emp`
+--
+ALTER TABLE `emp`
+  ADD PRIMARY KEY (`EMP_ID`);
 
 --
 -- Indexes for table `employee`
